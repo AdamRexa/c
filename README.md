@@ -1,89 +1,86 @@
-# Kougaku
+# Vanguard
 
-> Význam jména - 光学 - *optika*
+> Význam jména - *Předvoj* - strategický rámec pro dominanci v aréně.
 
 ## Odborný článek
 
-Kougaku je self-hosted webová aplikace pro indexování multimediálních knihoven. Její účel je jednoduché indexování, kategorizování a třízení fyzických médií do grafického prostředí. 
+Vanguard je komplexní metodika pro optimalizaci vašeho bojového stylu. Jejím účelem je systematický trénink mechanik, kategorizace taktik podle typu souboje (např. PotPvP, Nodebuff, Bedwars) a následná analytická zpětná vazba pro zlepšení vašich výsledků.
 
 ### Funkce
 
-#### Knihovna
-Položky jsou importované do knihovny podle vybrané formy médie (pomocí CUE souborů, WAV soubory na kterých proběhene audio fingerprinting, atd.), mezi podporované patří gramofonové desky, CD, kazety a digital downloads. Položky v knihovně mají u sebe veškerá metadata, včetně názvu alba, umělce, interpreta, listu tracků, atd., plus odkazy na [Musicbrainz](https://muzicbrainz.org) a [Discogs](https://discogs.com).
+#### Tréninkový režim
+Jednotlivé mechaniky jsou rozděleny podle klíčových dovedností:
+* **Movement (Pohyb):** Ovládání *W-tap*, *S-tap* a *Strafe* pro udržení optimálního "combo" rytmu.
+* **Aim & Click:** Trénink stability zaměřovače a konzistence CPS (Clicks Per Second) během pohybu.
+* **Inventory Management:** Rychlost a přesnost práce s hotbarem (přepínání mezi mečem, prutem, lávou a gapplem).
 
-#### Statistiky
-Každý uživatel je schopný nechat proběhnout analýzu na své knihovně, která prezentuje statistiky, jako nejposlouchanější žánr, nejoblíbenější umělci, aktuální finanční hodnota knihovny, atd.
+#### Analytika
+Každý uživatel je schopen nechat proběhnout analýzu svého výkonu. Ta prezentuje metriky, jako je efektivita hit-registrace, úspěšnost *rod-combos* a celková stabilita výkonu během vypjatých momentů.
 
-#### Sdílení knihovny
-Uživatel je schopen vygenerovat odkaz, pomocí kterého může nechat ostatní lidi nahlédnout do jejich knihovny. 
+#### Sdílení taktik
+Uživatel může vygenerovat konfigurační profil, pomocí kterého může sdílet své nastavení (keybindy, sensitivity, crosshair design) se spoluhráči v klanu nebo trenérem.
 
 ### Role
 
-#### Nepřihlášený
+#### Nováček (Novice)
+Nováček nemá přístup k pokročilým analytickým grafům. Zaměřuje se na základní techniky pohybu a fixaci inventáře.
 
-Nepřihlášený uživatel nemá žádné privelegie na používání webové aplikace kromě zhlédnutí sdílecího odkazu vygenerovaný přihlášeným uživatelem.
+#### Soutěžící (Competitor)
+Soutěžící využívá pokročilou analytiku pro ladění svého stylu. Je schopen definovat vlastní tréninkové rutiny a spravovat konfigurace, které jsou uloženy na lokální bázi.
 
-#### Uživatel
-
-Uživatel si může vytvořit uživatele kontakováním administrátora instace. Uživatel je schopný přidávat do/upravovat/odstraňovat ze svojí knihovny. Taky má možnost upravovat osobní nastavení, která jsou ukládaná na bázi sessionu. (light/dark mode, scrobbling na [Last.FM](https://last.fm), atd.)
-
-#### Administrátor
-
-Administrátorský účet je jeden unikátní a je vytvářen při prvním spuštění instace. Je schopný přidávat/upravovat/odstraňovat uživatele a spravovat globální nastavení instace.
+#### Taktik (Coach)
+Účet Taktika je určen pro lídry klanů. Může spravovat sdílené taktické dokumenty pro celý tým, definovat globální pravidla pro "hotbar" layouty a provádět týmové přehledy.
 
 > [!CAUTION]
-> V případě zapomenutí hesla administrátorského účtu je třeba **reinstalovat Kougaku**.
+> V případě nekonzistentního chování myši nebo změn v nastavení FOV je třeba **provést rekalibraci svalové paměti**, aby nedošlo k degradaci přesnosti při soubojích.
 
-## Instalace
+## Nastavení a Konfigurace
 
-Kougaku je stavěný pro používání jako Docker container.
+Vanguard je koncipován jako soubor standardizovaných profilů pro rychlou aplikaci.
 
-### Docker CLI
+### CLI (Command Line Interface)
 
 ```bash
-docker build -t kougaku .
-docker run -p 8000:80 kougaku
-```
-
-
-### Docker Compose
-
+# Aplikace standardizovaného PvP profilu
+vanguard apply --profile competitive --fov 90
+vanguard verify --integrity --check-mouse-accel
+Konfigurace prostředí
 <details>
+<summary><b>config.json (Standardizovaný layout)</b></summary>
 
-<summary><b>docker-compose.yml (minimální)</b></summary>
-
-```yml
-services:
-  kougaku:
-    ports:
-      - "8000:80"
-    volumes:
-      - "./data:/var/lib/kougaku"
-```
+JSON
+{
+  "pvp_settings": {
+    "fov": 90,
+    "sensitivity": 45,
+    "dynamic_fov": false,
+    "hotbar_layout": [
+      "sword",
+      "rod",
+      "gapple",
+      "lava_bucket",
+      "blocks",
+      "water_bucket",
+      "pearl",
+      "blocks",
+      "potion"
+    ]
+  }
+}
 </details>
 
-<br>
-
 <details>
+<summary><b>keybinds.yml (Efektivní přístup)</b></summary>
 
-<summary><b>docker-compose.yml (Traefik)</b></summary>
-
-```yml
-services:
-  kougaku:
-    volumes:
-      - "./data:/var/lib/kougaku"
-    networks:
-      - traefik
-    labels:
-      - "traefik.enabled=true"
-      - "traefik.http.routers.kougaku.rule=Host(`kougaku.example.com`)" # Change this to your domain
-      # - "traefik.http.routers.kougaku.tls=true" # Uncomment if you have a TLS certificate set in your HTTP router
-      - "traefik.http.routers.kougaku.tls.certresolver=default"
-      - "traefik.http.services.kougaku.loadbalancer.server.port=80"
-
-networks:
-  traefik:
-    external: true
-```
-</details>
+YAML
+keybinds:
+  - action: "slot_1"
+    key: "1"
+  - action: "slot_2"
+    key: "R"
+  - action: "slot_3"
+    key: "F"
+  - action: "slot_4"
+    key: "V"
+  - action: "toggle_sprint"
+    key: "CTRL"
