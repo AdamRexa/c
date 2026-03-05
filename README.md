@@ -8,12 +8,6 @@ Vanguard je komplexní metodika pro optimalizaci vašeho bojového stylu. Jejím
 
 ### Funkce
 
-#### Tréninkový režim
-Jednotlivé mechaniky jsou rozděleny podle klíčových dovedností:
-* **Movement (Pohyb):** Ovládání *W-tap*, *S-tap* a *Strafe* pro udržení optimálního "combo" rytmu.
-* **Aim & Click:** Trénink stability zaměřovače a konzistence CPS (Clicks Per Second) během pohybu.
-* **Inventory Management:** Rychlost a přesnost práce s hotbarem (přepínání mezi mečem, prutem, lávou a gapplem).
-
 #### Analytika
 Každý uživatel je schopen nechat proběhnout analýzu svého výkonu. Ta prezentuje metriky, jako je efektivita hit-registrace, úspěšnost *rod-combos* a celková stabilita výkonu během vypjatých momentů.
 
@@ -22,17 +16,14 @@ Uživatel může vygenerovat konfigurační profil, pomocí kterého může sdí
 
 ### Role
 
-#### Nováček (Novice)
+#### Začátečník (Noob)
 Nováček nemá přístup k pokročilým analytickým grafům. Zaměřuje se na základní techniky pohybu a fixaci inventáře.
 
-#### Soutěžící (Competitor)
+#### Pokročilý (Intermediate)
 Soutěžící využívá pokročilou analytiku pro ladění svého stylu. Je schopen definovat vlastní tréninkové rutiny a spravovat konfigurace, které jsou uloženy na lokální bázi.
 
-#### Taktik (Coach)
+#### Profík (Pro)
 Účet Taktika je určen pro lídry klanů. Může spravovat sdílené taktické dokumenty pro celý tým, definovat globální pravidla pro "hotbar" layouty a provádět týmové přehledy.
-
-> [!CAUTION]
-> V případě nekonzistentního chování myši nebo změn v nastavení FOV je třeba **provést rekalibraci svalové paměti**, aby nedošlo k degradaci přesnosti při soubojích.
 
 ## Nastavení a Konfigurace
 
