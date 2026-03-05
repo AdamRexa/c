@@ -9,10 +9,13 @@ Vanguard je komplexní metodika pro optimalizaci vašeho bojového stylu. Jejím
 ### Funkce
 
 #### Analytika
-Každý uživatel je schopen nechat proběhnout analýzu svého výkonu. Ta prezentuje metriky, jako je efektivita hit-registrace, úspěšnost *rod-combos* a celková stabilita výkonu během vypjatých momentů.
+Každý uživatel je schopen nechat proběhnout analýzu svého výkonu. Ostatní uživatelé budou moct ohodnotit, analyzovat a kritizovat kvalitu nahraného výkonu.
 
-#### Sdílení taktik
-Uživatel může vygenerovat konfigurační profil, pomocí kterého může sdílet své nastavení (keybindy, sensitivity, crosshair design) se spoluhráči v klanu nebo trenérem.
+#### Sdílení nastavení
+Uživatel může vygenerovat konfigurační profil, pomocí kterého může sdílet své nastavení (keybindy, sensitivity, crosshair design) se všemi uživateli.
+
+#### Řazení taktik
+Uživatelé budou moct nahrát různé taktiky (např. stun slam, shield drain, atd.). Poté je můžou uživatelé ohodnotit pětihvězdičkovým systémem.
 
 ### Role
 
