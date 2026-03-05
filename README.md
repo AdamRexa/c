@@ -1,10 +1,10 @@
-# Vanguard
+# Gladiator
 
-> Význam jména - *Předvoj* - strategický rámec pro dominanci v aréně.
+> Význam jména - *Gladiátor* - profesionální bojovník, který za účelem pobavení publika zápasil v arénách s jinými gladiátory nebo divokými zvířaty.
 
 ## Odborný článek
 
-Vanguard je komplexní metodika pro optimalizaci vašeho bojového stylu. Jejím účelem je systematický trénink mechanik, kategorizace taktik podle typu souboje (např. PotPvP, Nodebuff, Bedwars) a následná analytická zpětná vazba pro zlepšení vašich výsledků.
+Gladiator je komplexní metodika pro optimalizaci vašeho bojového stylu. Jejím účelem je systematický trénink mechanik, kategorizace taktik podle typu souboje (např. PotPvP, Nodebuff, Bedwars) a následná analytická zpětná vazba pro zlepšení vašich výsledků.
 
 ### Funkce
 
@@ -30,14 +30,14 @@ Soutěžící využívá pokročilou analytiku pro ladění svého stylu. Je sch
 
 ## Nastavení a Konfigurace
 
-Vanguard je koncipován jako soubor standardizovaných profilů pro rychlou aplikaci.
+Gladiator je koncipován jako soubor standardizovaných profilů pro rychlou aplikaci.
 
 ### CLI (Command Line Interface)
 
 ```bash
 # Aplikace standardizovaného PvP profilu
-vanguard apply --profile competitive --fov 90
-vanguard verify --integrity --check-mouse-accel
+gladiator apply --profile competitive --fov 90
+gladiator verify --integrity --check-mouse-accel
 Konfigurace prostředí
 <details>
 <summary><b>config.json (Standardizovaný layout)</b></summary>
